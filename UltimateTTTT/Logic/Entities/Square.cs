@@ -8,7 +8,6 @@ namespace UltimateTTTT.Logic.Entities
 {
     class Square
     {
-        //banan
-        //lol lmao hehe
+        Block blocks = null;
     }
 }

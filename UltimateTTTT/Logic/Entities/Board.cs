@@ -8,6 +8,6 @@ namespace UltimateTTTT.Logic.Entities
 {
     class Board
     {
-        //hello
+        Square squares = null;
     }
 }

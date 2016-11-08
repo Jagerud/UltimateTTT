@@ -13,7 +13,14 @@ namespace UltimateTTTT.Logic.Entities
 
         public void setOwner(int owner)
         {
-            this.owner = owner;
+            if (owner < 3)
+            {
+                this.owner = owner;
+            }
+            else
+            {
+                
+            }
         }
         public int getOwner()
         {

@@ -18,4 +18,9 @@ namespace UltimateTTTT
 
         }
     }
+    //Regelboken tar emot en instans av bräde och en vad som vill göras
+    //Hur saker behandlas mellan lager
+
+
 }
+

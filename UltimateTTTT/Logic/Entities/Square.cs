@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,18 @@ namespace UltimateTTTT.Logic.Entities
 {
     class Square
     {
-        Block blocks = null;
-        //test
+        ArrayList blockList = new ArrayList();
+        Block block0 = null;
+        Block block1 = null;
+        
+        public void BlockArrayBuilder()
+        {
+            blockList.Add(block0);
+            blockList.Add(block1);
+        }
+        public ArrayList getBlockList()
+        {
+            return blockList;
+        }
     }
 }

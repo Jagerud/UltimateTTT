@@ -15,7 +15,7 @@ namespace UltimateTTTT
             Square squares = new Square(); //insert blocks
             Board board = new Board();      //insert squares
             //nåt
-
+            
         }
     }
     //Regelboken tar emot en instans av bräde och en vad som vill göras

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UltimateTTTT.Logic.Entities;
 
 namespace UltimateTTTT
 {
@@ -22,6 +23,32 @@ namespace UltimateTTTT
     {
         public MainWindow()
         {
+            Blocks[] blocks = new Blocks[9];
+            Square[] squares = new Square[9];
+            int counter = 0;
+            //insert blocks
+
+            for (int i = 0; i < squares.Length; i++)
+            {
+                for (int j = 0; j < blocks.Length; j++)
+                {
+                    blocks[j] = new Blocks();
+                    blocks[j].setOwner(1);
+                }
+                squares[i] = new Square(blocks);
+            }
+            for (int i = 0; i < squares.Length; i++)
+                
+            {
+                for (int j = 0; j < blocks.Length; j++)
+                {
+                    counter++;
+                    System.Console.WriteLine("block: " + counter + " " + blocks[j].getOwner());
+                }
+
+            }
+            Board board = new Board();      //insert squares
+
             InitializeComponent();
         }
     }

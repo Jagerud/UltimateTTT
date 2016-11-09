@@ -10,15 +10,15 @@ namespace UltimateTTTT.Logic.Entities
     class Square
     {
        
-        public Square(Block[] blocks)
+        public Square(Blocks[] blocks)
         {
             this.blocks = blocks;
         }
 
         //ArrayList blockList = new ArrayList();
-        //Block block0 = null;
-        //Block block1 = null;
-        private Block[] blocks;
+        //Blocks block0 = null;
+        //Blocks block1 = null;
+        private Blocks[] blocks;
 
         /*public void BlockArrayBuilder()
         {

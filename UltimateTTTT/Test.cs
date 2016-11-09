@@ -9,9 +9,9 @@ namespace UltimateTTTT
 {
     class Test
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
-            Block[] blocks = new Block[9];
+            Blocks[] blocks = new Blocks[9];
             Square[] squares = new Square[9];
             //insert blocks
             
@@ -19,7 +19,7 @@ namespace UltimateTTTT
             {
                 for (int j = 0; j < blocks.Length; j++)
                 {
-                    blocks[j] = new Block();
+                    blocks[j] = new Blocks();
                     blocks[j].setOwner(1);
                 }
                 squares[i] = new Square(blocks);
@@ -36,11 +36,11 @@ namespace UltimateTTTT
             Board board = new Board();      //insert squares
             
             
-        }
+        } */
     }
     //Regelboken tar emot en instans av bräde och en vad som vill göras
     //Hur saker behandlas mellan lager
 
-
+    
 }
 

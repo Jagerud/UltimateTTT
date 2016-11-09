@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace UltimateTTTT.Logic.Entities
 {
     
-    class Block
+    class Blocks
     {
         private int owner = 0;
 

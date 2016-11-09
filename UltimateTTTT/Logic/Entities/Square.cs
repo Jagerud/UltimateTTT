@@ -9,5 +9,6 @@ namespace UltimateTTTT.Logic.Entities
     class Square
     {
         Block blocks = null;
+        //test
     }
 }

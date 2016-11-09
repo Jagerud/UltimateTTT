@@ -9,12 +9,13 @@ namespace UltimateTTTT
 {
     class Test
     {
-        /*static void Main(string[] args)
+       /* static void Main(string[] args)
         {
             Blocks[] blocks = new Blocks[9];
             Square[] squares = new Square[9];
+            int counter = 0;
             //insert blocks
-            
+
             for (int i = 0; i < squares.Length; i++)
             {
                 for (int j = 0; j < blocks.Length; j++)
@@ -25,21 +26,21 @@ namespace UltimateTTTT
                 squares[i] = new Square(blocks);
             }
             for (int i = 0; i < squares.Length; i++)
+
             {
                 for (int j = 0; j < blocks.Length; j++)
                 {
-                    
-                    System.Console.WriteLine(blocks[j].getOwner());
+                    counter++;
+                    System.Console.WriteLine("block: " + counter + " " + blocks[j].getOwner());
                 }
-                
+
             }
             Board board = new Board();      //insert squares
-            
-            
-        } */
+        }
+        //Regelboken tar emot en instans av bräde och en vad som vill göras
+        //Hur saker behandlas mellan lager
+        */
     }
-    //Regelboken tar emot en instans av bräde och en vad som vill göras
-    //Hur saker behandlas mellan lager
 
     
 }

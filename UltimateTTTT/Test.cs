@@ -14,13 +14,24 @@ namespace UltimateTTTT
             Block[] blocks = new Block[9];
             Square[] squares = new Square[9];
             //insert blocks
-            for (int i = 0; i < blocks.Length; i++)
+            
+            for (int i = 0; i < squares.Length; i++)
             {
-                blocks[i] = new Block();
+                for (int j = 0; j < blocks.Length; j++)
+                {
+                    blocks[j] = new Block();
+                    blocks[j].setOwner(1);
+                }
+                squares[i] = new Square(blocks);
             }
             for (int i = 0; i < squares.Length; i++)
             {
-                squares[i] = new Square(blocks);
+                for (int j = 0; j < blocks.Length; j++)
+                {
+                    
+                    System.Console.WriteLine(blocks[j].getOwner());
+                }
+                
             }
             Board board = new Board();      //insert squares
             

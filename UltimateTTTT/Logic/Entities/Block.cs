@@ -19,7 +19,7 @@ namespace UltimateTTTT.Logic.Entities
             }
             else
             {
-                System.Console.Write("Wrong input, should be 0-2");
+                System.Console.WriteLine("Wrong input, should be 0-2");
             }
         }
         public int getOwner()

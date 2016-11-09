@@ -16,8 +16,8 @@ namespace UltimateTTTT.Logic.Entities
         }
 
         //ArrayList blockList = new ArrayList();
-        Block block0 = null;
-        Block block1 = null;
+        //Block block0 = null;
+        //Block block1 = null;
         private Block[] blocks;
 
         /*public void BlockArrayBuilder()

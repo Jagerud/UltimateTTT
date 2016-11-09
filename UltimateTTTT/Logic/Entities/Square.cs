@@ -9,11 +9,18 @@ namespace UltimateTTTT.Logic.Entities
 {
     class Square
     {
-        ArrayList blockList = new ArrayList();
+       
+        public Square(Block[] blocks)
+        {
+            this.blocks = blocks;
+        }
+
+        //ArrayList blockList = new ArrayList();
         Block block0 = null;
         Block block1 = null;
-        
-        public void BlockArrayBuilder()
+        private Block[] blocks;
+
+        /*public void BlockArrayBuilder()
         {
             blockList.Add(block0);
             blockList.Add(block1);
@@ -22,5 +29,6 @@ namespace UltimateTTTT.Logic.Entities
         {
             return blockList;
         }
+        */
     }
 }

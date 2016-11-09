@@ -11,10 +11,19 @@ namespace UltimateTTTT
     {
         static void Main(string[] args)
         {
-            Block blocks = new Block();
-            Square squares = new Square(); //insert blocks
+            Block[] blocks = new Block[9];
+            Square[] squares = new Square[9];
+            //insert blocks
+            for (int i = 0; i < blocks.Length; i++)
+            {
+                blocks[i] = new Block();
+            }
+            for (int i = 0; i < squares.Length; i++)
+            {
+                squares[i] = new Square(blocks);
+            }
             Board board = new Board();      //insert squares
-            //nåt
+            
             
         }
     }

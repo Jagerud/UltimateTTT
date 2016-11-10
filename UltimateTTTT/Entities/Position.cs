@@ -19,5 +19,14 @@ namespace UltimateTTTT.Entities
         {
             this.position = position;
         }
+
+        public int GetSquarePosition()
+        {
+            return position[0];
+        }
+        public int GetBlockPosition()
+        {
+            return position[1];
+        }
     }
 }

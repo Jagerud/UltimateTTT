@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using UltimateTTTT.Entities;
+using UltimateTTTT.Logic.Entities;
 
 namespace UltimateTTTT.Logic
 {
     class Rules
     {
+        //Facade facade = new Facade(); 
         public void LockedSquare(Position position)
         {
+
+
             if (position.GetBlockPosition() == 0)
             {
                 //light up square 0
@@ -56,6 +61,12 @@ namespace UltimateTTTT.Logic
                 //light up square 0
 
             }
+        }
+
+        public Boolean Available(Position position, Square square)
+        {
+            return square.Blocks[0].getOwner() == 0;    //0 = Available
+            //position.GetPosition()[0]
         }
     }
 }

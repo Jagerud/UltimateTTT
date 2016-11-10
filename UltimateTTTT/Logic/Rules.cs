@@ -68,14 +68,26 @@ namespace UltimateTTTT.Logic
             return square.Blocks[0].getOwner().PlayerNumber == 0;    //0 = Available
         }
 
-        public void Winner(Square square)
+        public void Winner(Square square, Player player1, Player player2)
         {
             //3 in row horisontal
-            if (square.Blocks[0].getOwner().PlayerNumber == 0)
+            for (int i = 0; i < 9; i=i+3)
             {
-                
-            }
+                if (square.Blocks[i].getOwner().PlayerNumber == player1.PlayerNumber &&
+                    square.Blocks[i+1].getOwner().PlayerNumber == player1.PlayerNumber &&
+                    square.Blocks[i+2].getOwner().PlayerNumber == player1.PlayerNumber)
+                {
+                    //Player 1 wins this square
+                }
+                if (square.Blocks[i].getOwner().PlayerNumber == player1.PlayerNumber &&     //will not work, fix i
+                    square.Blocks[i + 3].getOwner().PlayerNumber == player1.PlayerNumber &&
+                    square.Blocks[i + 6].getOwner().PlayerNumber == player1.PlayerNumber)
+                {
+                    //Player 1 wins this square
+                }
 
+            }
+            
             //3 in row vertical
 
             //3 in row diagonally

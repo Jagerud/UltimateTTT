@@ -65,8 +65,20 @@ namespace UltimateTTTT.Logic
 
         public Boolean Available(Position position, Square square)
         {
-            return square.Blocks[0].getOwner() == 0;    //0 = Available
-            //position.GetPosition()[0]
+            return square.Blocks[0].getOwner().PlayerNumber == 0;    //0 = Available
+        }
+
+        public void Winner(Square square)
+        {
+            //3 in row horisontal
+            if (square.Blocks[0].getOwner().PlayerNumber == 0)
+            {
+                
+            }
+
+            //3 in row vertical
+
+            //3 in row diagonally
         }
     }
 }

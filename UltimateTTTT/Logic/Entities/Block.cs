@@ -9,11 +9,11 @@ namespace UltimateTTTT.Logic.Entities
     
     class Blocks
     {
-        private int owner = 0;
+        private Player owner ;
 
-        public void setOwner(int owner)
+        public void setOwner(Player owner)
         {
-            if (owner < 3)
+            if (owner.PlayerNumber < 3)
             {
                 this.owner = owner;
             }
@@ -22,7 +22,7 @@ namespace UltimateTTTT.Logic.Entities
                 System.Console.WriteLine("Wrong input, should be 0-2");
             }
         }
-        public int getOwner()
+        public Player getOwner()
         {
             return owner;
         }

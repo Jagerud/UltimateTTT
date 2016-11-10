@@ -25,6 +25,8 @@ namespace UltimateTTTT
         {
             Blocks[] blocks = new Blocks[9];
             Square[] squares = new Square[9];
+            Player player1 = new Player(1);
+            Player player2 = new Player(2);
             int counter = 0;
             
 
@@ -33,7 +35,7 @@ namespace UltimateTTTT
                 for (int j = 0; j < blocks.Length; j++)
                 {
                     blocks[j] = new Blocks();
-                    blocks[j].setOwner(1);
+                    blocks[j].setOwner(player1);
                 }
                 squares[i] = new Square(blocks);
             }

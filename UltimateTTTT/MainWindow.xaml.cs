@@ -27,9 +27,9 @@ namespace UltimateTTTT
             Square[] squares = new Square[9];
             Player player1 = new Player(1);
             Player player2 = new Player(2);
+            Player[] players = new Player[2];
             int counter = 0;
             
-
             for (int i = 0; i < squares.Length; i++)
             {
                 for (int j = 0; j < blocks.Length; j++)
@@ -39,8 +39,18 @@ namespace UltimateTTTT
                 }
                 squares[i] = new Square(blocks);
             }
+            
+            players[0] = player1;
+            players[1] = player2;
+            Board board = new Board();     //insert everything in constructor
+            
+            
+            
+            //insert squares
+
+
+            /*
             for (int i = 0; i < squares.Length; i++)
-                
             {
                 for (int j = 0; j < blocks.Length; j++)
                 {
@@ -48,9 +58,7 @@ namespace UltimateTTTT
                     System.Console.WriteLine("block: " + counter + " " +  blocks[j].getOwner());
                 }
 
-            }
-            Board board = new Board();      //insert squares
-
+            }*/
             InitializeComponent();
         }
     }

@@ -62,10 +62,10 @@ namespace UltimateTTTT.Logic
 
             }
         }
-
+        //If block is free
         public Boolean Available(Position position, Square square)
         {
-            return square.Blocks[0].getOwner().PlayerNumber == 0;    //0 = Available
+            return square.Blocks[0].getOwner() == 0;    //0 = Available
         }
 
         public void Winner(Square square, Player[] players)
@@ -79,9 +79,9 @@ namespace UltimateTTTT.Logic
                 for (int i = 0; i < 9; i = i + 3)
                 {
 
-                    if (square.Blocks[i].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                        square.Blocks[i + 1].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                        square.Blocks[i + 2].getOwner().PlayerNumber == players[j].PlayerNumber)
+                    if (square.Blocks[i].getOwner() == players[j].PlayerNumber &&
+                        square.Blocks[i + 1].getOwner() == players[j].PlayerNumber &&
+                        square.Blocks[i + 2].getOwner() == players[j].PlayerNumber)
                     {
                         //Player 1 wins this square
                     }
@@ -91,23 +91,23 @@ namespace UltimateTTTT.Logic
                 //3 in row vertical
                 for (int i = 0; i < 3; i++)
                 {
-                    if (square.Blocks[i].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                        square.Blocks[i + 3].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                        square.Blocks[i + 6].getOwner().PlayerNumber == players[j].PlayerNumber)
+                    if (square.Blocks[i].getOwner() == players[j].PlayerNumber &&
+                        square.Blocks[i + 3].getOwner() == players[j].PlayerNumber &&
+                        square.Blocks[i + 6].getOwner() == players[j].PlayerNumber)
                     {
                         //Player 1 wins this square
                     }
                 }
                 //3 in row diagonally
-                if (square.Blocks[0].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                    square.Blocks[4].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                    square.Blocks[8].getOwner().PlayerNumber == players[j].PlayerNumber)
+                if (square.Blocks[0].getOwner() == players[j].PlayerNumber &&
+                    square.Blocks[4].getOwner() == players[j].PlayerNumber &&
+                    square.Blocks[8].getOwner() == players[j].PlayerNumber)
                 {
                     //Player 1 wins this square
                 }
-                if (square.Blocks[2].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                    square.Blocks[4].getOwner().PlayerNumber == players[j].PlayerNumber &&
-                    square.Blocks[6].getOwner().PlayerNumber == players[j].PlayerNumber)
+                if (square.Blocks[2].getOwner() == players[j].PlayerNumber &&
+                    square.Blocks[4].getOwner() == players[j].PlayerNumber &&
+                    square.Blocks[6].getOwner() == players[j].PlayerNumber)
                 {
                     //Player 1 wins this square
                 }

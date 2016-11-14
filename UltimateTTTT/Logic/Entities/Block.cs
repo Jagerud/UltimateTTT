@@ -9,20 +9,15 @@ namespace UltimateTTTT.Logic.Entities
     
     class Blocks
     {
-        private Player owner ;
-
+        //private Player owner ;
+        private int owner;
         public void setOwner(Player owner)
         {
-            if (owner.PlayerNumber < 3)
-            {
-                this.owner = owner;
-            }
-            else
-            {
-                System.Console.WriteLine("Wrong input, should be 0-2");
-            }
+            
+            this.owner = owner.PlayerNumber;
+            
         }
-        public Player getOwner()
+        public int getOwner()
         {
             return owner;
         }

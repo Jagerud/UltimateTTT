@@ -9,7 +9,7 @@ namespace UltimateTTTT.Logic.Entities
     public class Player
     {
         int playerNumber;
-
+        
         public Player(int playerNumber)
         {
             this.playerNumber = playerNumber;

@@ -35,7 +35,7 @@ namespace UltimateTTTT
                 for (int j = 0; j < blocks.Length; j++)
                 {
                     blocks[j] = new Blocks();
-                    blocks[j].setOwner(player1);
+                    //blocks[j].setOwner(player1);
                 }
                 squares[i] = new Square(blocks);
             }

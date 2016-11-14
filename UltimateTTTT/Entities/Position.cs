@@ -14,12 +14,10 @@ namespace UltimateTTTT.Entities
         {
             return position;
         }
-
         public void SetPosition(int[] position) //or send 2 values and put in position
         {
             this.position = position;
         }
-
         public int GetSquarePosition()
         {
             return position[0];

@@ -9,11 +9,12 @@ namespace UltimateTTTT.Logic
 {
     class Facade
     {
-        Board board = new Board();
+        /*Board board = new Board();
 
         public Board getBoard()
         {
             return board;
         }
+        */
     }
 }

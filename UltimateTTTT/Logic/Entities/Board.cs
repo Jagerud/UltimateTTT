@@ -9,20 +9,22 @@ namespace UltimateTTTT.Logic.Entities
 {
     class Board
     {
-        ArrayList squaresList = new ArrayList();
-        Square square0 = null;
-        Square square1 = null;
-        public void SquareArrayBuilder()
+        //ArrayList squaresList = new ArrayList();
+        private Blocks[] blocks;
+        private Square[] squares;
+        private Player[] players;
+
+        public Board(Blocks[] blocks, Square[] squares, Player[] players)
         {
-            squaresList.Add(square0);
-            squaresList.Add(square1);
+            this.blocks = blocks;
+            this.squares = squares;
+            this.players = players;
         }
         
 
-        public ArrayList getSquareList()
+        public Square[] GetSquare()
         {
-            return squaresList;
+            return squares;
         }
     }
-    //test
 }

@@ -10,13 +10,13 @@ namespace UltimateTTTT.Logic.Entities
     class Square
     {
         private Blocks[] blocks;
-        private Boolean locked = false;
+        private Boolean locked;
         public Square(Blocks[] blocks)
         {
             this.blocks = blocks;
         }
 
-        public void SetLocked(Boolean locked)
+        public void SetLockedState(Boolean locked)
         {
             this.locked = locked;
         }

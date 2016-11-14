@@ -14,8 +14,6 @@ namespace UltimateTTTT.Logic
         //Facade facade = new Facade(); 
         public void LockedSquare(Position position)
         {
-
-
             if (position.GetBlockPosition() == 0)
             {
                 //light up square 0
@@ -74,8 +72,6 @@ namespace UltimateTTTT.Logic
 
             for (int j = 0; j < 2; j++)
             {
-
-
                 for (int i = 0; i < 9; i = i + 3)
                 {
 
@@ -85,8 +81,6 @@ namespace UltimateTTTT.Logic
                     {
                         //Player 1 wins this square
                     }
-
-
                 }
                 //3 in row vertical
                 for (int i = 0; i < 3; i++)
@@ -126,6 +120,22 @@ namespace UltimateTTTT.Logic
                 }
             }
             return full;
+        }
+
+        public void LockSquares(Position position, Board board)
+        {
+            
+            for (int i = 0; i < 9; i++)
+            {
+                if (position.GetBlockPosition() == i)    //change null to generic block
+                {
+                    //dont do much really, chill for a fraction of a second.
+                }
+                else
+                {
+                    board.GetSquare()[i].SetLockedState(true);
+                }
+            }
         }
     }
 }

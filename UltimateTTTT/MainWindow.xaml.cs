@@ -42,7 +42,7 @@ namespace UltimateTTTT
             
             players[0] = player1;
             players[1] = player2;
-            Board board = new Board();     //insert everything in constructor
+            Board board = new Board(blocks, squares, players);     //insert everything in constructor
             
             
             

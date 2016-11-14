@@ -114,5 +114,18 @@ namespace UltimateTTTT.Logic
             }
 
         }
+
+        public Boolean SquareFull(Square square)
+        {
+            Boolean full = true;
+            for (int i = 0; i < 9; i++)
+            {
+                if (square.Blocks[i].getOwner() == 0)
+                {
+                    full = false;
+                }
+            }
+            return full;
+        }
     }
 }

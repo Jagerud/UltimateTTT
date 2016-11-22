@@ -11,6 +11,11 @@ namespace UltimateTTTT.Logic.Entities
     {
         //private Player owner ;
         private int owner;
+
+        public Blocks()
+        {
+            
+        }
         public void SetOwner(Player owner)
         {
             

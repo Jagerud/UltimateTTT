@@ -48,9 +48,9 @@ namespace UltimateTTTT
             players[1] = player2;
             Board board = new Board(squares, players);     //insert everything in constructor
             Motor motor = new Motor(board, rules);
-            
 
 
+            System.Console.WriteLine(motor.Move(position, 0, 0, 0, players[0]) ? "Success!" : "Position taken");
 
             if (motor.Move(position, 0, 0, 0, players[0]))
             {
@@ -64,9 +64,6 @@ namespace UltimateTTTT
             
             
             
-
-            
-
 
             InitializeComponent();
         }

@@ -15,9 +15,10 @@ namespace UltimateTTTT.Logic
         private Rules rules;
         //private Position position = new Position();
 
-        public Motor(Board board)
+        public Motor(Board board, Rules rules)
         {
             this.board= board;
+            this.rules = rules;
         }
 
         public Boolean Move(Position position, int squarePos, int blockPos, Player player)

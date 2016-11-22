@@ -25,6 +25,7 @@ namespace UltimateTTTT
     {
         public MainWindow()
         {
+            Rules rules = new Rules();
             Position position = new Position();
             Blocks[] blocks = new Blocks[9];
             Square[] squares = new Square[9];
@@ -46,14 +47,14 @@ namespace UltimateTTTT
             players[0] = player1;
             players[1] = player2;
             Board board = new Board(squares, players);     //insert everything in constructor
-            Motor motor = new Motor(board);
+            Motor motor = new Motor(board, rules);
             
 
 
 
             if (motor.Move(position, 0, 0, players[0]))
             {
-                
+                System.Console.WriteLine("Success!");
             }
             else
             {

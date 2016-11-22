@@ -54,6 +54,8 @@ namespace UltimateTTTT
             System.Console.WriteLine(motor.Move(position, 0, 1, players[0]) ? "Success!" : "Position taken");
             System.Console.WriteLine(motor.Move(position, 0, 2, players[0]) ? "Success!" : "Position taken");
 
+            motor.RunGame(position,0,0,players);
+
 
 
             InitializeComponent();

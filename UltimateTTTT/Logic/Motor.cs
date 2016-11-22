@@ -21,6 +21,27 @@ namespace UltimateTTTT.Logic
             this.rules = rules;
         }
 
+        public void RunGame(Position position, int squarePos, int blockPos, Player player)
+        {
+            int playerPos=0;
+            int counter=0;
+            while (true)
+            {
+                Move(position, squarePos, blockPos, playerPos, player);
+                
+                if (counter%2 == 0)
+                {
+                    playerPos++;
+                }
+                else
+                {
+                    playerPos--;
+                }
+                counter++;
+            }
+        }
+
+        public Boolean Move(Position position, int squarePos, int blockPos, int playerPos, Player player)
         public Boolean Move(Position position, int squarePos, int blockPos, Player player)
         {
             position.SetPosition(squarePos,blockPos);

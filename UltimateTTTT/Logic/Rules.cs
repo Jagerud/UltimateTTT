@@ -9,6 +9,9 @@ using UltimateTTTT.Logic.Entities;
 
 namespace UltimateTTTT.Logic
 {
+    /**
+     * Many of the methods should probably be private when finished.
+     */
     class Rules
     {
         //Facade facade = new Facade(); 
@@ -79,7 +82,8 @@ namespace UltimateTTTT.Logic
                         square.Blocks[i + 1].getOwner() == players[j].PlayerNumber &&
                         square.Blocks[i + 2].getOwner() == players[j].PlayerNumber)
                     {
-                        //Player 1 wins this square
+                        //Player  wins this square
+                        WonGame(players[j]);
                     }
                 }
                 //3 in row vertical
@@ -89,7 +93,8 @@ namespace UltimateTTTT.Logic
                         square.Blocks[i + 3].getOwner() == players[j].PlayerNumber &&
                         square.Blocks[i + 6].getOwner() == players[j].PlayerNumber)
                     {
-                        //Player 1 wins this square
+                        //Player  wins this square
+                        WonGame(players[j]);
                     }
                 }
                 //3 in row diagonally
@@ -97,13 +102,15 @@ namespace UltimateTTTT.Logic
                     square.Blocks[4].getOwner() == players[j].PlayerNumber &&
                     square.Blocks[8].getOwner() == players[j].PlayerNumber)
                 {
-                    //Player 1 wins this square
+                    //Player  wins this square
+                    WonGame(players[j]);
                 }
                 if (square.Blocks[2].getOwner() == players[j].PlayerNumber &&
                     square.Blocks[4].getOwner() == players[j].PlayerNumber &&
                     square.Blocks[6].getOwner() == players[j].PlayerNumber)
                 {
                     //Player 1 wins this square
+                    WonGame(players[j]);
                 }
             }
 
@@ -136,6 +143,14 @@ namespace UltimateTTTT.Logic
                     board.GetSquare()[i].SetLockedState(true);
                 }
             }
+        }
+        /**
+         * Call this method when a player wins
+         * 
+         */
+        public void WonGame(Player player)
+        {
+            System.Console.WriteLine("Player: " + player + " won!");        //temporary before graphical UI
         }
     }
 }

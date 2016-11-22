@@ -8,15 +8,16 @@ namespace UltimateTTTT.Entities
 {
     class Position
     {
-
+        //A square and a block in that square
         private int[] position = new int[2];
         public int[] GetPosition()
         {
             return position;
         }
-        public void SetPosition(int[] position) //or send 2 values and put in position
+        public void SetPosition(int square,int block) //or send 2 values and put in position
         {
-            this.position = position;
+            position[0] = square;
+            position[1] = block;
         }
         public int GetSquarePosition()
         {

@@ -20,11 +20,22 @@ namespace UltimateTTTT.Logic.Entities
             this.squares = squares;
             this.players = players;
         }
-        
+
+        public Blocks[] GetBlocks()
+        {
+            return blocks;
+        }
 
         public Square[] GetSquare()
         {
             return squares;
         }
+        public Player[] GetPlayers()
+        {
+            return players;
+        }
+
+
+
     }
 }

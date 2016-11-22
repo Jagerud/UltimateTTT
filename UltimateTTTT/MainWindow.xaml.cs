@@ -50,9 +50,9 @@ namespace UltimateTTTT
             Motor motor = new Motor(board, rules);
 
 
-            System.Console.WriteLine(motor.Move(position, 0, 0, 0, players[0]) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(position, 0, 1, 0, players[0]) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(position, 0, 2, 0, players[0]) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(position, 0, 0, players[0]) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(position, 0, 1, players[0]) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(position, 0, 2, players[0]) ? "Success!" : "Position taken");
 
 
 

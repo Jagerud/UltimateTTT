@@ -21,7 +21,7 @@ namespace UltimateTTTT.Logic
             this.rules = rules;
         }
 
-        public Boolean Move(Position position, int squarePos, int blockPos, int playerPos, Player player)
+        public Boolean Move(Position position, int squarePos, int blockPos, Player player)
         {
             position.SetPosition(squarePos,blockPos);
             //if free
@@ -29,7 +29,7 @@ namespace UltimateTTTT.Logic
                 return false;
             board.GetSquare(squarePos).getBlock(blockPos).SetOwner(player);
             //check if winner
-            rules.Winner(board.GetSquare(squarePos), board.GetPlayers(playerPos));
+            rules.Winner(board.GetSquare(squarePos), player);
             return true;
             //block
         }

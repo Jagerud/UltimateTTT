@@ -12,7 +12,7 @@ namespace UltimateTTTT.Logic.Entities
         private Square[] squares;
         private Player[] players;
 
-        public Board(Blocks[] blocks, Square[] squares, Player[] players)
+        public Board(Square[] squares, Player[] players)
         {
             this.squares = squares;
             this.players = players;

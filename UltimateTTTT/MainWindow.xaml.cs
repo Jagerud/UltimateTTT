@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UltimateTTTT.Logic;
 using UltimateTTTT.Logic.Entities;
 
 namespace UltimateTTTT
@@ -43,13 +44,20 @@ namespace UltimateTTTT
             players[0] = player1;
             players[1] = player2;
             Board board = new Board(blocks, squares, players);     //insert everything in constructor
+            Motor motor = new Motor(board);
             
             
             
-            //insert squares
+            
+
+            
 
 
-            /*
+            InitializeComponent();
+        }
+    }
+}
+/*
             for (int i = 0; i < squares.Length; i++)
             {
                 for (int j = 0; j < blocks.Length; j++)
@@ -59,7 +67,3 @@ namespace UltimateTTTT
                 }
 
             }*/
-            InitializeComponent();
-        }
-    }
-}

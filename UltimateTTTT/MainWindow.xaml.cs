@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UltimateTTTT.Entities;
 using UltimateTTTT.Logic;
 using UltimateTTTT.Logic.Entities;
 
@@ -24,6 +25,7 @@ namespace UltimateTTTT
     {
         public MainWindow()
         {
+            Position position = new Position();
             Blocks[] blocks = new Blocks[9];
             Square[] squares = new Square[9];
             Player player1 = new Player(1);
@@ -36,7 +38,7 @@ namespace UltimateTTTT
                 for (int j = 0; j < blocks.Length; j++)
                 {
                     blocks[j] = new Blocks();
-                    //blocks[j].setOwner(player1);
+                    //blocks[j].SetOwner(player1);
                 }
                 squares[i] = new Square(blocks);
             }
@@ -46,6 +48,18 @@ namespace UltimateTTTT
             Board board = new Board(blocks, squares, players);     //insert everything in constructor
             Motor motor = new Motor(board);
             
+
+
+
+            if (motor.Move(position, 0, 0, players[0]))
+            {
+                
+            }
+            else
+            {
+                //taken position, should not be clickable in finished product.
+                System.Console.WriteLine("Position taken");
+            }
             
             
             
@@ -63,7 +77,7 @@ namespace UltimateTTTT
                 for (int j = 0; j < blocks.Length; j++)
                 {
                     counter++;
-                    System.Console.WriteLine("block: " + counter + " " +  blocks[j].getOwner());
+                    System.Console.WriteLine("block: " + counter + " " +  blocks[j].GetOwner());
                 }
 
             }*/

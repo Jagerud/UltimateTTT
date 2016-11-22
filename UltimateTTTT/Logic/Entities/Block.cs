@@ -11,13 +11,13 @@ namespace UltimateTTTT.Logic.Entities
     {
         //private Player owner ;
         private int owner;
-        public void setOwner(Player owner)
+        public void SetOwner(Player owner)
         {
             
             this.owner = owner.PlayerNumber;
             
         }
-        public int getOwner()
+        public int GetOwner()
         {
             return owner;
         }

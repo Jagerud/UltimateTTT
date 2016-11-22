@@ -21,7 +21,7 @@ namespace UltimateTTTT
                 for (int j = 0; j < blocks.Length; j++)
                 {
                     blocks[j] = new Blocks();
-                    blocks[j].setOwner(1);
+                    blocks[j].SetOwner(1);
                 }
                 squares[i] = new Square(blocks);
             }
@@ -31,7 +31,7 @@ namespace UltimateTTTT
                 for (int j = 0; j < blocks.Length; j++)
                 {
                     counter++;
-                    System.Console.WriteLine("block: " + counter + " " + blocks[j].getOwner());
+                    System.Console.WriteLine("block: " + counter + " " + blocks[j].GetOwner());
                 }
 
             }

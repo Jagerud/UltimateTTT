@@ -27,7 +27,7 @@ namespace UltimateTTTT.Logic
             int counter=0;
             while (true)
             {
-                Move(position, squarePos, blockPos, playerPos, player);
+                Move(position, squarePos, blockPos, player);
                 
                 if (counter%2 == 0)
                 {
@@ -41,7 +41,7 @@ namespace UltimateTTTT.Logic
             }
         }
 
-        public Boolean Move(Position position, int squarePos, int blockPos, int playerPos, Player player)
+        
         public Boolean Move(Position position, int squarePos, int blockPos, Player player)
         {
             position.SetPosition(squarePos,blockPos);

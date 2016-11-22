@@ -51,19 +51,10 @@ namespace UltimateTTTT
 
 
             System.Console.WriteLine(motor.Move(position, 0, 0, 0, players[0]) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(position, 0, 1, 0, players[0]) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(position, 0, 2, 0, players[0]) ? "Success!" : "Position taken");
 
-            if (motor.Move(position, 0, 0, 0, players[0]))
-            {
-                System.Console.WriteLine("Success!");
-            }
-            else
-            {
-                //taken position, should not be clickable in finished product.
-                System.Console.WriteLine("Position taken");
-            }
-            
-            
-            
+
 
             InitializeComponent();
         }

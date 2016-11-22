@@ -148,7 +148,8 @@ namespace UltimateTTTT.Logic
          */
         public void WonGame(Player player)
         {
-            System.Console.WriteLine("Player: " + player + " won!");        //temporary before graphical UI
+            System.Console.WriteLine("Player: " + player.PlayerNumber + " won!");        //temporary before graphical UI
+            System.Environment.Exit(1);
         }
     }
 }

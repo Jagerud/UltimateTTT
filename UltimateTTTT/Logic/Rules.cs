@@ -66,53 +66,51 @@ namespace UltimateTTTT.Logic
         //If block is free
         public Boolean Available(Position position, Square square)
         {
-            return square.Blocks[0].GetOwner() == 0;    //0 = Available
+            return square.getBlock(0).GetOwner() == 0;    //0 = Available
         }
 
-        public void Winner(Square square, Player[] players)
+        public void Winner(Square square, Player player)
         {
             //3 in row horisontal
 
-            for (int j = 0; j < 2; j++)
-            {
                 for (int i = 0; i < 9; i = i + 3)
                 {
 
-                    if (square.Blocks[i].GetOwner() == players[j].PlayerNumber &&
-                        square.Blocks[i + 1].GetOwner() == players[j].PlayerNumber &&
-                        square.Blocks[i + 2].GetOwner() == players[j].PlayerNumber)
+                    if (square.getBlock(i).GetOwner() == player.PlayerNumber &&
+                        square.getBlock(i + 1).GetOwner() == player.PlayerNumber &&
+                        square.getBlock(i + 2).GetOwner() == player.PlayerNumber)
                     {
                         //Player  wins this square
-                        WonGame(players[j]);
+                        WonGame(player);
                     }
                 }
                 //3 in row vertical
                 for (int i = 0; i < 3; i++)
                 {
-                    if (square.Blocks[i].GetOwner() == players[j].PlayerNumber &&
-                        square.Blocks[i + 3].GetOwner() == players[j].PlayerNumber &&
-                        square.Blocks[i + 6].GetOwner() == players[j].PlayerNumber)
+                    if (square.getBlock(i).GetOwner() == player.PlayerNumber &&
+                        square.getBlock(i + 3).GetOwner() == player.PlayerNumber &&
+                        square.getBlock(i + 6).GetOwner() == player.PlayerNumber)
                     {
                         //Player  wins this square
-                        WonGame(players[j]);
+                        WonGame(player);
                     }
                 }
                 //3 in row diagonally
-                if (square.Blocks[0].GetOwner() == players[j].PlayerNumber &&
-                    square.Blocks[4].GetOwner() == players[j].PlayerNumber &&
-                    square.Blocks[8].GetOwner() == players[j].PlayerNumber)
+                if (square.getBlock(0).GetOwner() == player.PlayerNumber &&
+                    square.getBlock(4).GetOwner() == player.PlayerNumber &&
+                    square.getBlock(8).GetOwner() == player.PlayerNumber)
                 {
                     //Player  wins this square
-                    WonGame(players[j]);
+                    WonGame(player);
                 }
-                if (square.Blocks[2].GetOwner() == players[j].PlayerNumber &&
-                    square.Blocks[4].GetOwner() == players[j].PlayerNumber &&
-                    square.Blocks[6].GetOwner() == players[j].PlayerNumber)
+                if (square.getBlock(2).GetOwner() == player.PlayerNumber &&
+                    square.getBlock(4).GetOwner() == player.PlayerNumber &&
+                    square.getBlock(6).GetOwner() == player.PlayerNumber)
                 {
                     //Player 1 wins this square
-                    WonGame(players[j]);
+                    WonGame(player);
                 }
-            }
+
 
         }
 
@@ -121,7 +119,7 @@ namespace UltimateTTTT.Logic
             Boolean full = true;
             for (int i = 0; i < 9; i++)
             {
-                if (square.Blocks[i].GetOwner() == 0)
+                if (square.getBlock(i).GetOwner() == 0)
                 {
                     full = false;
                 }
@@ -140,7 +138,7 @@ namespace UltimateTTTT.Logic
                 }
                 else
                 {
-                    board.GetSquare()[i].SetLockedState(true);
+                    board.GetSquare(i).SetLockedState(true);
                 }
             }
         }

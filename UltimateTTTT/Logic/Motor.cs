@@ -21,15 +21,15 @@ namespace UltimateTTTT.Logic
             this.rules = rules;
         }
 
-        public Boolean Move(Position position, int squarePos, int blockPos, Player player)
+        public Boolean Move(Position position, int squarePos, int blockPos, int playerPos, Player player)
         {
             position.SetPosition(squarePos,blockPos);
             //if free
-            if (board.GetSquare()[position.GetSquarePosition()].Blocks[position.GetBlockPosition()].GetOwner() != 0)
+            if (board.GetSquare(squarePos).getBlock(blockPos).GetOwner() != 0)
                 return false;
-            board.GetSquare()[position.GetSquarePosition()].Blocks[position.GetBlockPosition()].SetOwner(player);
+            board.GetSquare(squarePos).getBlock(blockPos).SetOwner(player);
             //check if winner
-            rules.Winner(board.GetSquare()[position.GetSquarePosition()], board.GetPlayers());
+            rules.Winner(board.GetSquare(squarePos), board.GetPlayers(playerPos));
             return true;
             //block
         }

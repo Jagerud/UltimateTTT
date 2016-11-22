@@ -33,7 +33,7 @@ namespace UltimateTTTT
             Player player2 = new Player(2);
             Player[] players = new Player[2];
             int counter = 0;
-            
+
             for (int i = 0; i < squares.Length; i++)
             {
                 for (int j = 0; j < blocks.Length; j++)
@@ -52,7 +52,7 @@ namespace UltimateTTTT
 
 
 
-            if (motor.Move(position, 0, 0, players[0]))
+            if (motor.Move(position, 0, 0, 0, players[0]))
             {
                 System.Console.WriteLine("Success!");
             }

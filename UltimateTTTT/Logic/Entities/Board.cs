@@ -18,13 +18,13 @@ namespace UltimateTTTT.Logic.Entities
             this.players = players;
         }
 
-        public Square[] GetSquare()
+        public Square GetSquare(int squarePos)
         {
-            return squares;
+            return squares[squarePos];
         }
-        public Player[] GetPlayers()
+        public Player GetPlayers(int playerPos)
         {
-            return players;
+            return players[playerPos];
         }
     }
 }

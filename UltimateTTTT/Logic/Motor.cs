@@ -59,7 +59,10 @@ namespace UltimateTTTT.Logic
                 return false;
             board.GetSquare(squarePos).getBlock(blockPos).SetOwner(board.GetPlayers(playerPos));
             //check if winner
-            rules.Winner(board.GetSquare(squarePos), board.GetPlayers(playerPos));
+            if (rules.Winner(board.GetSquare(squarePos), board.GetPlayers(playerPos)))
+            {
+                WonGame(playerPos);
+            }
             return true;
             //block
         }

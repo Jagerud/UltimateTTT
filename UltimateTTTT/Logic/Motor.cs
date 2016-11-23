@@ -14,7 +14,7 @@ namespace UltimateTTTT.Logic
         private Board board;
         private Rules rules;
         private Position position;
-        private Boolean worldEnder = true; //Ends the world as we know it!
+        private Boolean worldEnder = false; //Ends the world as we know it!
 
         //private Position position = new Position();
 
@@ -28,10 +28,10 @@ namespace UltimateTTTT.Logic
 
         public void RunGame( int squarePos, int blockPos)
         {
-            board.GetPlayers(0);
+            
             int playerPos=0;
             int counter=0;
-            while (worldEnder)
+            while (!worldEnder)
             {
                 while (!Move(squarePos, blockPos, playerPos)) ;
 

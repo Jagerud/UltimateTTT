@@ -24,7 +24,7 @@ namespace UltimateTTTT
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        {   //Blocks does not seem to be initialized???
             Rules rules = new Rules();
             Position position = new Position();
             Blocks[] blocks0 = new Blocks[9];

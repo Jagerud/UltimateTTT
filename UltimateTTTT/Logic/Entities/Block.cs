@@ -10,7 +10,7 @@ namespace UltimateTTTT.Logic.Entities
     class Blocks
     {
         //private Player owner ;
-        private int owner;
+        private int owner = 0;
         private int tempCounter;
 
         public Blocks()

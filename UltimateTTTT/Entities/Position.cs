@@ -3,29 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UltimateTTTT.Logic.Entities;
 
 namespace UltimateTTTT.Entities
 {
     class Position
     {
         //A square and a block in that square
-        private int[] position = new int[2];
-        public int[] GetPosition()
+        private int blockPosition;
+        private Square squarePosition;
+        public int GetPosition()
         {
-            return position;
+            return blockPosition;
         }
-        public void SetPosition(int square,int block) //or send 2 values and put in position
+        public void SetPosition(Square square,int block) //or send 2 values and put in blockPosition
         {
-            position[0] = square;
-            position[1] = block;
+            squarePosition = square;
+            blockPosition = block;
         }
-        public int GetSquarePosition()
+        public Square GetSquarePosition()
         {
-            return position[0];
+            return squarePosition;
         }
         public int GetBlockPosition()
         {
-            return position[1];
+            return blockPosition;
         }
     }
 }

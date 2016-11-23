@@ -25,13 +25,13 @@ namespace UltimateTTTT.Logic
             this.position = position;
         }
 
-        public void RunGame(int squarePos, int blockPos)
+        public void RunGame(Square squarePos, int blockPos, Player player)
         {
             int playerPos = 0;
             int counter = 0;
             while (!worldEnder)
             {
-                while (!Move(squarePos, blockPos, playerPos)) ;
+                while (!Move(squarePos, blockPos, player)) ;
 
 
                 if (counter%2 == 0)
@@ -47,18 +47,18 @@ namespace UltimateTTTT.Logic
         }
 
 
-        public Boolean Move(int squarePos, int blockPos, int playerPos)
+        public Boolean Move(Square square, int blockPos, Player player)
         {
-            position.SetPosition(squarePos, blockPos);
-            while (!rules.Available(board.GetSquare(position.GetSquarePosition()).getBlock(position.GetBlockPosition())))
+            position.SetPosition(square, blockPos);
+            while (!rules.Available(position.GetSquarePosition().getBlock(position.GetBlockPosition())))
             {
-                position.SetPosition(squarePos, blockPos);
+                position.SetPosition(square, blockPos);
             }
-            board.GetSquare(position.GetSquarePosition()).getBlock(position.GetBlockPosition()).SetOwner(board.GetPlayers(playerPos));
+            position.GetSquarePosition().getBlock(position.GetBlockPosition()).SetOwner(player);
             //check if winner
-            if (rules.Winner(board.GetSquare(position.GetSquarePosition()), board.GetPlayers(playerPos)))
+            if (rules.Winner(position.GetSquarePosition(), player))
             {
-                WonGame(playerPos);
+                WonGame(player);
             }
             return true;
         }
@@ -68,9 +68,9 @@ namespace UltimateTTTT.Logic
          *
          */
 
-        public void WonGame(int playerPos)
+        public void WonGame(Player player)
         {
-            System.Console.WriteLine("Player: " + board.GetPlayers(playerPos).PlayerNumber + " won!");
+            System.Console.WriteLine("Player: " + player.PlayerNumber + " won!");
                 //temporary before graphical UI
             worldEnder = true;
         }

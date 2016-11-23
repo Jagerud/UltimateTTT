@@ -57,25 +57,25 @@ namespace UltimateTTTT
             Motor motor = new Motor(board, rules, position);
 
 
-            System.Console.WriteLine(motor.Move(0, 0, 0) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(0, 1, 1) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 0, player1) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 1, player2) ? "Success!" : "Position taken");
 
-            System.Console.WriteLine(motor.Move(0, 2, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 2, player1) ? "Success!" : "Position taken");
 
-            System.Console.WriteLine(motor.Move(0, 1, 1) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(1, 0, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 1, player2) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 0, player1) ? "Success!" : "Position taken");
 
-            System.Console.WriteLine(motor.Move(0, 2, 1) ? "Success!" : "Position taken");
-
-
-            System.Console.WriteLine(motor.Move(2, 0, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 2, player2) ? "Success!" : "Position taken");
 
 
-            System.Console.WriteLine(motor.Move(0, 5, 1) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 0, player1) ? "Success!" : "Position taken");
 
-            System.Console.WriteLine(motor.Move(5, 0, 0) ? "Success!" : "Position taken");
 
-            System.Console.WriteLine(motor.Move(0, 8, 1) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 5, player2) ? "Success!" : "Position taken");
+
+            System.Console.WriteLine(motor.Move(squares[0], 0, player1) ? "Success!" : "Position taken");
+
+            System.Console.WriteLine(motor.Move(squares[0], 8, player2) ? "Success!" : "Position taken");
 
 
 

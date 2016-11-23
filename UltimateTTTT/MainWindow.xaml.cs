@@ -39,11 +39,22 @@ namespace UltimateTTTT
                 for (int j = 0; j < blocks.Length; j++)
                 {
                     blocks[j] = new Blocks();
-                    //blocks[j].SetOwner(player1);
+                    blocks[j].setCounter(counter);
+                    counter++;
+
                 }
                 squares[i] = new Square(blocks);
             }
-            
+            for (int i = 0; i < squares.Length; i++)
+            {
+                for (int j = 0; j < blocks.Length; j++)
+                {
+                    //counter++;
+                    System.Console.WriteLine("block: " + counter + " " + blocks[j].getCounter());
+                }
+
+            }
+
             players[0] = player1;
             players[1] = player2;
             Board board = new Board(squares, players);     //insert everything in constructor
@@ -51,16 +62,24 @@ namespace UltimateTTTT
 
 
             System.Console.WriteLine(motor.Move(0, 0, 0) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(1, 1, 1) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(0, 1, 1) ? "Success!" : "Position taken");
+
             System.Console.WriteLine(motor.Move(0, 2, 0) ? "Success!" : "Position taken");
+
+            System.Console.WriteLine(motor.Move(0, 1, 1) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(1, 0, 0) ? "Success!" : "Position taken");
 
             System.Console.WriteLine(motor.Move(0, 2, 1) ? "Success!" : "Position taken");
 
 
-            System.Console.WriteLine(motor.Move(1, 1, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(2, 0, 0) ? "Success!" : "Position taken");
 
 
-            System.Console.WriteLine(motor.Move(0, 2, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(0, 5, 1) ? "Success!" : "Position taken");
+
+            System.Console.WriteLine(motor.Move(5, 0, 0) ? "Success!" : "Position taken");
+
+            System.Console.WriteLine(motor.Move(0, 8, 1) ? "Success!" : "Position taken");
 
 
 

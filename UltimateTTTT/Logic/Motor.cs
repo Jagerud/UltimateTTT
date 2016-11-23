@@ -50,14 +50,13 @@ namespace UltimateTTTT.Logic
         public Boolean Move(int squarePos, int blockPos, int playerPos)
         {
             position.SetPosition(squarePos, blockPos);
-            while (!rules.Available(blockPos, board.GetSquare(squarePos)))
+            while (!rules.Available(board.GetSquare(position.GetSquarePosition()).getBlock(position.GetBlockPosition())))
             {
                 position.SetPosition(squarePos, blockPos);
             }
-
-            board.GetSquare(squarePos).getBlock(blockPos).SetOwner(board.GetPlayers(playerPos));
+            board.GetSquare(position.GetSquarePosition()).getBlock(position.GetBlockPosition()).SetOwner(board.GetPlayers(playerPos));
             //check if winner
-            if (rules.Winner(board.GetSquare(squarePos), board.GetPlayers(playerPos)))
+            if (rules.Winner(board.GetSquare(position.GetSquarePosition()), board.GetPlayers(playerPos)))
             {
                 WonGame(playerPos);
             }

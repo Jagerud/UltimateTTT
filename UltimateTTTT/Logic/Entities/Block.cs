@@ -11,10 +11,20 @@ namespace UltimateTTTT.Logic.Entities
     {
         //private Player owner ;
         private int owner;
+        private int tempCounter;
 
         public Blocks()
         {
             
+        }
+
+        public void setCounter(int counter)
+        {
+            tempCounter = counter;
+        }
+        public int getCounter()
+        {
+            return tempCounter;
         }
         public void SetOwner(Player owner)
         {

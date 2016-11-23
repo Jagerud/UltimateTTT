@@ -64,9 +64,9 @@ namespace UltimateTTTT.Logic
             }
         }
         //If block is free
-        public Boolean Available(int blockPos, Square square)
+        public Boolean Available(Blocks block)
         {
-            return square.getBlock(blockPos).GetOwner() == 0;    //0 = Available
+            return block.GetOwner() == 0;    //0 = Available
         }
         //public void NextMove(int ) 
 

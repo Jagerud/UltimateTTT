@@ -13,21 +13,26 @@ namespace UltimateTTTT.Logic
         //not sure about variables
         private Board board;
         private Rules rules;
+        private Position position;
+        
         //private Position position = new Position();
 
-        public Motor(Board board, Rules rules)
+        public Motor(Board board, Rules rules, Position position)
         {
             this.board= board;
             this.rules = rules;
+            this.position = position;
+            
         }
 
-        public void RunGame(Position position, int squarePos, int blockPos, Player player)
+        public void RunGame( int squarePos, int blockPos)
         {
+            board.GetPlayers(0);
             int playerPos=0;
             int counter=0;
             while (true)
             {
-                Move(position, squarePos, blockPos, player);
+                Move(squarePos, blockPos, playerPos);
                 
                 if (counter%2 == 0)
                 {
@@ -42,15 +47,15 @@ namespace UltimateTTTT.Logic
         }
 
         
-        public Boolean Move(Position position, int squarePos, int blockPos, Player player)
+        public Boolean Move(int squarePos, int blockPos, int playerPos)
         {
             position.SetPosition(squarePos,blockPos);
             //if free
             if (board.GetSquare(squarePos).getBlock(blockPos).GetOwner() != 0)
                 return false;
-            board.GetSquare(squarePos).getBlock(blockPos).SetOwner(player);
+            board.GetSquare(squarePos).getBlock(blockPos).SetOwner(board.GetPlayers(playerPos));
             //check if winner
-            rules.Winner(board.GetSquare(squarePos), player);
+            rules.Winner(board.GetSquare(squarePos), board.GetPlayers(playerPos));
             return true;
             //block
         }

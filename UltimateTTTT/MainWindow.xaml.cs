@@ -47,12 +47,12 @@ namespace UltimateTTTT
             players[0] = player1;
             players[1] = player2;
             Board board = new Board(squares, players);     //insert everything in constructor
-            Motor motor = new Motor(board, rules);
+            Motor motor = new Motor(board, rules, position);
 
 
-            System.Console.WriteLine(motor.Move(position, 0, 0, players[0]) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(position, 0, 1, players[0]) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(position, 0, 2, players[0]) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(0, 0, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(0, 1, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(0, 2, 0) ? "Success!" : "Position taken");
             
 
 

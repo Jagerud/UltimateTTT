@@ -75,7 +75,6 @@ namespace UltimateTTTT.Logic
 
                 for (int i = 0; i < 9; i = i + 3)
                 {
-
                     if (square.getBlock(i).GetOwner() == player.PlayerNumber &&
                         square.getBlock(i + 1).GetOwner() == player.PlayerNumber &&
                         square.getBlock(i + 2).GetOwner() == player.PlayerNumber)
@@ -91,25 +90,25 @@ namespace UltimateTTTT.Logic
                         square.getBlock(i + 3).GetOwner() == player.PlayerNumber &&
                         square.getBlock(i + 6).GetOwner() == player.PlayerNumber)
                     {
-                        //Player  wins this square
-                        return true;
-                    }
+                    //Player  wins this square
+                    return true;
+                }
                 }
                 //3 in row diagonally
                 if (square.getBlock(0).GetOwner() == player.PlayerNumber &&
                     square.getBlock(4).GetOwner() == player.PlayerNumber &&
                     square.getBlock(8).GetOwner() == player.PlayerNumber)
                 {
-                    //Player  wins this square
-                    return true;
-                }
+                //Player  wins this square
+                return true;
+            }
                 if (square.getBlock(2).GetOwner() == player.PlayerNumber &&
                     square.getBlock(4).GetOwner() == player.PlayerNumber &&
                     square.getBlock(6).GetOwner() == player.PlayerNumber)
                 {
-                    //Player 1 wins this square
-                    return true;
-                }
+                //Player 1 wins this square
+                return true;
+            }
             return false;
 
         }

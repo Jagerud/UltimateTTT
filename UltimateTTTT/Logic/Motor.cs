@@ -14,7 +14,8 @@ namespace UltimateTTTT.Logic
         private Board board;
         private Rules rules;
         private Position position;
-        
+        private Boolean worldEnder = true; //Ends the world as we know it!
+
         //private Position position = new Position();
 
         public Motor(Board board, Rules rules, Position position)
@@ -30,12 +31,12 @@ namespace UltimateTTTT.Logic
             board.GetPlayers(0);
             int playerPos=0;
             int counter=0;
-            while (true)
+            while (worldEnder)
             {
                 while (!Move(squarePos, blockPos, playerPos)) ;
-                
-                    
-                
+
+
+
                 
                 if (counter%2 == 0)
                 {

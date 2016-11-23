@@ -64,5 +64,15 @@ namespace UltimateTTTT.Logic
             //block
         }
 
+        /**
+         * Call this method when a player wins
+         *
+         */
+        public void WonGame(int playerPos)
+        {
+            System.Console.WriteLine("Player: " + board.GetPlayers(playerPos).PlayerNumber + " won!");        //temporary before graphical UI
+            worldEnder = true;
+        }
+
     }
 }

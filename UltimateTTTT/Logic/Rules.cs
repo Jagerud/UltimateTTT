@@ -142,14 +142,5 @@ namespace UltimateTTTT.Logic
                 }
             }
         }
-        /**
-         * Call this method when a player wins
-         * 
-         */
-        public void WonGame(Player player)
-        {
-            System.Console.WriteLine("Player: " + player.PlayerNumber + " won!");        //temporary before graphical UI
-            System.Environment.Exit(1);
-        }
     }
 }

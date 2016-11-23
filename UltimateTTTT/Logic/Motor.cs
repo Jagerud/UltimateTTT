@@ -32,7 +32,10 @@ namespace UltimateTTTT.Logic
             int counter=0;
             while (true)
             {
-                Move(squarePos, blockPos, playerPos);
+                while (!Move(squarePos, blockPos, playerPos)) ;
+                
+                    
+                
                 
                 if (counter%2 == 0)
                 {

@@ -20,24 +20,20 @@ namespace UltimateTTTT.Logic
 
         public Motor(Board board, Rules rules, Position position)
         {
-            this.board= board;
+            this.board = board;
             this.rules = rules;
             this.position = position;
-            
         }
 
-        public void RunGame( int squarePos, int blockPos)
+        public void RunGame(int squarePos, int blockPos)
         {
-            
-            int playerPos=0;
-            int counter=0;
+            int playerPos = 0;
+            int counter = 0;
             while (!worldEnder)
             {
                 while (!Move(squarePos, blockPos, playerPos)) ;
 
 
-
-                
                 if (counter%2 == 0)
                 {
                     playerPos++;
@@ -50,13 +46,15 @@ namespace UltimateTTTT.Logic
             }
         }
 
-        
+
         public Boolean Move(int squarePos, int blockPos, int playerPos)
         {
-            position.SetPosition(squarePos,blockPos);
-            //if free
-            if (board.GetSquare(squarePos).getBlock(blockPos).GetOwner() != 0)
-                return false;
+            position.SetPosition(squarePos, blockPos);
+            while (!rules.Available(blockPos, board.GetSquare(squarePos)))
+            {
+                position.SetPosition(squarePos, blockPos);
+            }
+
             board.GetSquare(squarePos).getBlock(blockPos).SetOwner(board.GetPlayers(playerPos));
             //check if winner
             if (rules.Winner(board.GetSquare(squarePos), board.GetPlayers(playerPos)))
@@ -64,18 +62,18 @@ namespace UltimateTTTT.Logic
                 WonGame(playerPos);
             }
             return true;
-            //block
         }
 
         /**
          * Call this method when a player wins
          *
          */
+
         public void WonGame(int playerPos)
         {
-            System.Console.WriteLine("Player: " + board.GetPlayers(playerPos).PlayerNumber + " won!");        //temporary before graphical UI
+            System.Console.WriteLine("Player: " + board.GetPlayers(playerPos).PlayerNumber + " won!");
+                //temporary before graphical UI
             worldEnder = true;
         }
-
     }
 }

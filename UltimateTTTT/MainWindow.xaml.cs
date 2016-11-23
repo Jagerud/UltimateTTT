@@ -51,9 +51,18 @@ namespace UltimateTTTT
 
 
             System.Console.WriteLine(motor.Move(0, 0, 0) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(0, 1, 0) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(1, 1, 1) ? "Success!" : "Position taken");
             System.Console.WriteLine(motor.Move(0, 2, 0) ? "Success!" : "Position taken");
-            
+
+            System.Console.WriteLine(motor.Move(0, 2, 1) ? "Success!" : "Position taken");
+
+
+            System.Console.WriteLine(motor.Move(1, 1, 0) ? "Success!" : "Position taken");
+
+
+            System.Console.WriteLine(motor.Move(0, 2, 0) ? "Success!" : "Position taken");
+
+
 
 
 

@@ -10,11 +10,11 @@ namespace UltimateTTTT.Logic.Entities
 {
     class Square
     {
-        private Blocks[] blocks;
+        private Block[] block;
         private Boolean locked;
-        public Square(Blocks[] blocks)
+        public Square(Block[] block)
         {
-            this.blocks = blocks;
+            this.block = block;
         }
 
         public void SetLockedState(Boolean locked)
@@ -29,14 +29,19 @@ namespace UltimateTTTT.Logic.Entities
 
         //public getBlock getBlock { get ; set; }
 
-        public Blocks getBlock(int blockPos)
+        public Block getBlock(int blockPos)
         {
-            return blocks[blockPos];
+            return block[blockPos];
         }
 
-        public void setBlock(Block block)
+        public Block[] getBlockArray()
         {
+            return block;
+        }
 
+        public void setBlock(Block block, int position)
+        {
+            this.block[position] = block;
         }
 
         //ArrayList blockList = new ArrayList();

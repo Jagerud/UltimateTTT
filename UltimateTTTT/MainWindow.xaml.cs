@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using UltimateTTTT.Entities;
 using UltimateTTTT.Logic;
 using UltimateTTTT.Logic.Entities;
+using Block = UltimateTTTT.Logic.Entities.Block;
 
 namespace UltimateTTTT
 {
@@ -24,18 +25,21 @@ namespace UltimateTTTT
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {   //Blocks does not seem to be initialized???
+        {   
             Rules rules = new Rules();
             Position position = new Position();
-            Blocks[] blocks0 = new Blocks[9];
-            Blocks[] blocks1 = new Blocks[9];
-            Blocks[] blocks2 = new Blocks[9];
-            Blocks[] blocks3 = new Blocks[9];
-            Blocks[] blocks4 = new Blocks[9];
-            Blocks[] blocks5 = new Blocks[9];
-            Blocks[] blocks6 = new Blocks[9];
-            Blocks[] blocks7 = new Blocks[9];
-            Blocks[] blocks8 = new Blocks[9];
+            Block[] blocks0 = new Block[9];
+            Block[] blocks1 = new Block[9];
+            Block[] blocks2 = new Block[9];
+            Block[] blocks3 = new Block[9];
+            Block[] blocks4 = new Block[9];
+            Block[] blocks5 = new Block[9];
+            Block[] blocks6 = new Block[9];
+            Block[] blocks7 = new Block[9];
+            Block[] blocks8 = new Block[9];
+
+            
+
             Square[] squares = new Square[9];
             squares[0] = new Square(blocks0);
             squares[1] = new Square(blocks1);
@@ -46,6 +50,15 @@ namespace UltimateTTTT
             squares[6] = new Square(blocks6);
             squares[7] = new Square(blocks7);
             squares[8] = new Square(blocks8);
+            
+            for (int i = 0; i < squares.Length; i++)
+            {
+                for (int j = 0; j < squares[i].getBlockArray().Length; j++)
+                {
+                    Block tempBlock = new Block();
+                    squares[i].setBlock(tempBlock, j);
+                }
+            }
 
             Player player1 = new Player(1);
             Player player2 = new Player(2);
@@ -62,12 +75,12 @@ namespace UltimateTTTT
 
             System.Console.WriteLine(motor.Move(squares[0], 2, player1) ? "Success!" : "Position taken");
 
-            System.Console.WriteLine(motor.Move(squares[0], 1, player2) ? "Success!" : "Position taken");
-            System.Console.WriteLine(motor.Move(squares[0], 0, player1) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 4, player2) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 8, player1) ? "Success!" : "Position taken");
 
-            System.Console.WriteLine(motor.Move(squares[0], 2, player2) ? "Success!" : "Position taken");
+            System.Console.WriteLine(motor.Move(squares[0], 7, player2) ? "Success!" : "Position taken");
 
-
+/*
             System.Console.WriteLine(motor.Move(squares[0], 0, player1) ? "Success!" : "Position taken");
 
 
@@ -77,7 +90,7 @@ namespace UltimateTTTT
 
             System.Console.WriteLine(motor.Move(squares[0], 8, player2) ? "Success!" : "Position taken");
 
-
+    */
 
 
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Documents;
 using UltimateTTTT.Entities;
 using UltimateTTTT.Logic.Entities;
+using Block = UltimateTTTT.Logic.Entities.Block;
 
 namespace UltimateTTTT.Logic
 {
@@ -64,7 +65,7 @@ namespace UltimateTTTT.Logic
             }
         }
         //If block is free
-        public Boolean Available(Blocks block)
+        public Boolean Available(Block block)
         {
             return block.GetOwner() == 0;    //0 = Available
         }

@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace UltimateTTTT.Logic.Entities
 {
     
-    class Blocks
+    class Block
     {
         //private Player owner ;
         private int owner = 0;
         private int tempCounter;
 
-        public Blocks()
+        public Block()
         {
             
         }
